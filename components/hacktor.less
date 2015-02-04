@@ -1,0 +1,83 @@
+body {
+    text-align: center;
+    #mw-body {
+        margin-left: auto;
+        text-align: left;
+    }
+    #hacktor-wrapper {
+        margin: 0 auto;
+        max-width: 848px;
+        position: relative;
+    }
+    #p-logo {
+        display: none;
+    }
+    #mw-navigation-toggle {
+        height: 40px;
+        width: 120px;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: green;
+    }
+    #mw-navigation {
+        display: none;
+    }
+    #mw-panel {
+        top: 40px;
+        text-align: left;
+        z-index: 3;
+    }
+    .hacktor-menu {
+        background: white;
+        border: 1px solid #ccc;
+        padding: 0.5em;
+    }
+    #mw-head,
+    #content,
+    div#footer {
+        margin: 0;
+        width: auto;
+    }
+    #mw-head {
+        height: 79px;
+        position: relative;
+    }
+    #left-navigation {
+        margin-left: 0;
+    }
+    // hide a bunch of things from the personal menu
+    #pt-mytalk,
+    #pt-preferences,
+    #pt-watchlist,
+    #pt-mycontris,
+    #pt-logout {
+        //display: none;
+    }
+    #hacktor-pmenu {
+        display: none;
+        position: absolute;
+        top: 40px;
+        right: 0;
+        z-index: 1;
+        list-style-image: none;
+        list-style-type: none;
+        text-align: right;
+        padding: 10px;
+        li {
+            line-height: 1.125em;
+            margin: 0;
+            padding: 0.25em 0;
+            font-size: @menu-main-body-font-size;
+            word-wrap: break-word;
+
+            a {
+                color: @menu-main-body-link-color;
+                &:visited {
+                    color: @menu-main-body-link-visited-color;
+                }
+            }
+        }
+    }
+}

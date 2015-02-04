@@ -104,4 +104,37 @@ jQuery( function ( $ ) {
 				}
 			}
 		} );
+    /*
+     * Begin hacks
+     */
+
+    // site nav menu
+    $( '#mw-navigation-toggle' ).click(
+        function() { $( '#mw-navigation' ).toggle(); }
+    );
+
+    // build personal menu
+    $pmenu = ($('<ul id="hacktor-pmenu"></ul>')
+                .addClass('hacktor-menu')
+                .prependTo('#hacktor-wrapper')
+                .append(
+                    $('#pt-mytalk'), 
+                    $('#pt-preferences'), 
+                    $('#pt-watchlist'), 
+                    $('#pt-mycontris'), 
+                    $('#pt-logout') 
+                )
+            );
+    // clone the user page ino the menu
+    $('#pt-userpage').clone().attr('id', '#pt-userpage-clone').prependTo($pmenu);
+    // make opening the menu work
+    $('#pt-userpage').click(function(e){
+        e.preventDefault();
+        $pmenu.toggle();
+    });
+
+    // style the page nave menu
+    $('#mw-navigation #mw-panel').addClass('hacktor-menu');
+
+
 } );
