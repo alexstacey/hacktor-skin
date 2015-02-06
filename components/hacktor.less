@@ -1,4 +1,5 @@
 body {
+    background: #2a67ff url("images/bluegrid.png") repeat center center;
     text-align: center;
     #mw-body {
         margin-left: auto;
@@ -13,13 +14,13 @@ body {
         display: none;
     }
     #mw-navigation-toggle {
-        height: 40px;
-        width: 120px;
+        height: 28px;
+        width: 130px;
         cursor: pointer;
         position: absolute;
-        top: 0;
+        top: 6px;
         left: 0;
-        background: green;
+        background: transparent url(images/participate-logo.png) no-repeat top left;
     }
     #mw-navigation {
         display: none;
@@ -50,10 +51,31 @@ body {
     #left-navigation {
         margin-left: 0;
     }
+    div.vectorTabs ul li {
+        background-image: none;
+        background: rgba(255, 255, 255, 0.5);
+    }
+    div.vectorTabs span a {
+        padding-top: 1em;
+    }
+    #p-personal {
+        background: white;
+        float: right;
+        margin: 0;
+        padding: 6px;
+        right: auto;
+        // override absolute
+        position: static;
+        ul {
+            padding: 0;
+        }
+    }
+    #right-navigation {
+    }
     #hacktor-pmenu {
         display: none;
         position: absolute;
-        top: 40px;
+        top: 28px;
         right: 0;
         z-index: 1;
         list-style-image: none;
@@ -73,6 +95,20 @@ body {
                     color: @menu-main-body-link-visited-color;
                 }
             }
+        }
+    }
+    #footer {
+        padding: 0;
+        ul li {
+            color: #eee;
+        }
+        #footer-places,
+        #footer-icons {
+            //margin-top: -30px;
+        }
+        a {
+            color: white;
+            text-decoration: underline;
         }
     }
 }
